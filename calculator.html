@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            button{
+                padding: 10px;
+                margin: 10px;
+            }
+        </style>
+        <script>
+            var val="";
+            function handleClick(value){
+                
+
+                if(value == "="){
+                    let displayValue = eval(val)
+                    document.getElementById("disp1").innerHTML = val;
+                    document.getElementById("disp").innerHTML = displayValue;
+                }
+                else if(value == "AC"){
+                    val="";
+                    document.getElementById("disp1").innerHTML = val;
+                    document.getElementById("disp").innerHTML = val;
+                }
+                else{
+                    val = val + value;
+                    document.getElementById("disp").innerHTML = val;
+                }
+
+            }
+        </script>
+    </head>
+    <body style="background-color: rgb(101, 240, 96)">
+        <div >
+            <h1>Calculator</h1>
+            <div style="background-color: aliceblue; padding: 20px;  width: 250px; " >
+                <p id="disp1"></p>
+                <p id="disp" style="padding: 50px; width: 100px;  margin: 10px; text-align: center; background-color: black; color: white;" ></p>
+                <div>
+                    <button onclick="handleClick('9')">9</button>
+                    <button onclick="handleClick('8')">8</button>
+                    <button onclick="handleClick('7')">7</button>
+                    <button onclick="handleClick('+')">+</button>
+                </div>
+                <div>
+                    <button onclick="handleClick('6')">6</button>
+                    <button onclick="handleClick('5')">5</button>
+                    <button onclick="handleClick('4')">4</button>
+                    <button onclick="handleClick('-')">-</button>
+                </div>
+                <div>
+                    <button onclick="handleClick('3')">3</button>
+                    <button onclick="handleClick('2')">2</button>
+                    <button onclick="handleClick('1')">1</button>
+                    <button onclick="handleClick('/')">/</button>
+                </div>
+                <div>
+                    <button onclick="handleClick('0')">0</button>
+                    <button onclick="handleClick('=')">=</button>
+                    <button onclick="handleClick('')"></button>
+                    <button onclick="handleClick('AC')">C</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

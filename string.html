@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = "This is the sentence used for the demonstration";
+        function findLen(){
+            var stlen = str.length;
+            document.getElementById("ln").innerHTML = stlen;
+        }
+        function findTxt(){
+            var txt = document.getElementById("fintxt").value;
+            console.log(txt)
+            var pos = str.search(`${txt}`)
+            document.getElementById("tx").innerHTML = pos;
+        }
+        function slc(){
+            var num1 = document.getElementById("slc1").value;
+            var num2 = document.getElementById("slc2").value;
+            console.log(num1);
+            console.log(num2);
+            var res = str.slice(num1,num2);
+            console.log(res)
+            document.getElementById("sc").innerHTML = res;
+        }
+    </script>
+</head>
+<body style="background-color: rgb(240, 218, 96)">
+    <h1>String objects</h1>
+    <p>Below shown is the sentence where you can try out string functions</p>
+    <b>This is the sentence used for the demonstration</b>
+    <p>Try to find out the length by clicking this button</p>
+    <button onclick="findLen()">Find length</button>
+    <p id="ln"></p>
+    <p>Try to find out the first occurrence of a specified text in the sring</p>
+    <input type="text" id="fintxt" placeholder="Enter specific word.." />
+    <button onclick="findTxt()">Search</button>
+    <p id="tx"></p>
+    <p>Enter 2 parameters for slicing function</p>
+    <input type="number" id="slc1" placeholder="Enter 1st param.." />&nbsp;<input type="number" id="slc2" placeholder="Enter 2nd param.." />
+    <button onclick="slc()">Search</button>
+    <p id="sc"></p>
+    <!-- <p>Try Replace function! </p> -->
+</body>
+</html>

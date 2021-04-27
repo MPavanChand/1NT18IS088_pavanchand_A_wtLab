@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: green;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+        }
+        p{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div style="text-align: center;">
+        
+        
+        <b><span id="op" style="font-size: 30px; color: red; "></span></b>
+    </div>
+    
+    <div style="padding-left: 300px; padding-top: 100px;">
+        <h1 style="font-size: 50px;">Number objects</h1>
+        <p>Number is: 15.605</p>
+        <button onclick="exp()">To exponential</button>&nbsp;<button onclick="fxd()">To fixed</button>&nbsp;<button onclick="pre()">To Precision</button>
+        <p id="num"></p>
+    </div>
+    
+</body>
+
+
+<script type="text/javascript">
+    var time = document.getElementById('op');
+
+    function fun() {
+        time.innerHTML = new Date().toString();
+    }
+
+    setInterval(fun);
+</script>
+<script>
+    let num = 15.605;
+    function exp(){
+        document.getElementById("num").innerHTML = num.toExponential();
+    }
+    function fxd(){
+        document.getElementById("num").innerHTML = num.toFixed();
+    }
+    function pre(){
+        document.getElementById("num").innerHTML = num.toPrecision(3);
+    }
+</script>
+</html>
