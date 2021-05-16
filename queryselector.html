@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 class="is">"This is heading"</h2>
+<p class="is">"This is paragraph".</p> 
+
+<p>Click the button to add a background color all elements with class="is".</p>
+
+<button onclick="myFunction()">Try it</button>
+<script>
+function myFunction() {
+  var x, i;
+  x = document.querySelectorAll(".is");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.backgroundColor = "blue";
+  }
+}
+</script>
+
+</body>
+</html>
